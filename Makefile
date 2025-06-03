@@ -32,6 +32,9 @@ clean:
 	@echo cleaning
 	@rm -f slock ${OBJ} slock-${VERSION}.tar.gz
 
+update: all
+	bash ./install
+
 dist: clean
 	@echo creating dist tarball
 	@mkdir -p slock-${VERSION}
